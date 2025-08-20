@@ -1,8 +1,9 @@
 // Initialize the map with a default view
-var map = L.map('map').setView([42.1110, -76.0652], 13);
-var currentLocation = [42.1110, -76.0652];
-var defaultLocationName = "Endicott, NY";
+var map = L.map('map').setView([40.7128, -74.0060], 13);
+var currentLocation = [40.7128, -74.0060]; // Default to New York City coordinates
+var defaultLocationName = "New York, NY";
 var isFetching = false;
+
 
 // Add OSM tile layer
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
