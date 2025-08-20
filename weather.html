@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="weather.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Weather Forecast</h1>
+        <div class="weather-card">
+            <div id="WeatherIcon"></div>
+            <div>
+                <p>City: <span id="City"></span></p>
+            </div>
+            <div>
+                <p>Temperature: <span id="Temperature"></span></p>
+            </div>
+            <div>
+                <p>Feels Like: <span id="WindChill"></span></p>
+            </div>
+            <div>
+                <p>Weather Type: <span id="WeatherType"></span></p>
+            </div>
+            <div>
+                <p>Wind Speed: <span id="WindSpeed"></span></p>
+            </div>
+            <div>
+                <p>Wind Direction: <span id="WindDirection"></span></p>
+            </div>
+            <div>
+                <p>Humidity: <span id="Humidity"></span></p>
+            </div>
+
+            <div role="button" class="button-role" onclick="window.location.href='index.html'">
+                Return To Map
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Parse URL parameters
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const temperature = urlParams.get('temperature');
+        const weatherType = urlParams.get('weatherType');
+        const windSpeed = urlParams.get('windSpeed');
+        const windDirection = urlParams.get('windDirection');
+        const humidity = urlParams.get('humidity');
+        const windChill = urlParams.get('windChill');
+        const city = urlParams.get('city');
+
+        // console log all the values
+        console.log(`Temperature: ${temperature}, Feels Like: ${windChill}, 
+        Weather Type: ${weatherType}, Wind Speed: ${windSpeed}, 
+        Wind Direction: ${windDirection}, Humidity: ${humidity}, City: ${city}`);
+
+        console.log("Wind Direction : " + windDirection);
+
+        // grab WeatherIcon from local storage
+        const weatherIcon = localStorage.getItem('iconPath');
+
+        // Update weather information on the page
+        document.getElementById('Temperature').textContent = temperature + "°";
+        document.getElementById('WindChill').textContent = windChill + "°";
+        document.getElementById('WeatherType').textContent = weatherType;
+        document.getElementById('WindSpeed').textContent = windSpeed + " mph";
+        document.getElementById('WindDirection').textContent = windDirection;
+        document.getElementById('Humidity').textContent = humidity + "%";
+        document.getElementById('City').textContent = city;
+
+        console.log("Weather Icon " + weatherIcon);
+
+        document.getElementById('WeatherIcon').innerHTML = `<img src="${weatherIcon}">`;
+
+    </script>
+
+</body>
+
+</html>
