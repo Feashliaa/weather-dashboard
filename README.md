@@ -37,7 +37,7 @@ https://github.com/user-attachments/assets/24b44136-9570-4a34-a683-7d9683f34f3a
    `WEATHER_API_KEY=your_openweather_api_key`
 
 4. Start the server:  
-   `node index.js`
+   `node index.js` or `nodemon index.js`
 
 5. Open your browser at:  
    `http://localhost:3000`
