@@ -85,6 +85,5 @@ weather-dashboard/
 ## Notes
 
 - `node_modules` is excluded — run `npm install` to install dependencies.  
-- Do **not** commit `.env`; it contains your private API key.  
 
 ---
