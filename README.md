@@ -1,18 +1,18 @@
-🌤 Weather Dashboard
+Weather Dashboard
 
 An interactive weather dashboard that shows current weather information for any location using Leaflet.js and the OpenWeather API. Click on the map to view weather info and explore a detailed weather page.
 
 Features
 
-🗺 Interactive map to select a location
+Interactive map to select a location
 
-🌡 Displays temperature, feels-like temperature, wind speed & direction, humidity, and weather description
+Displays temperature, feels-like temperature, wind speed & direction, humidity, and weather description
 
-🌤 Dynamic weather icons
+Dynamic weather icons
 
-🔗 Popup with a “More Info” button linking to a detailed weather page
+Popup with a “More Info” button linking to a detailed weather page
 
-↩ Easy Return to Map button
+Easy Return to Map button
 
 Demo
 
